@@ -1,0 +1,32 @@
+version: 2
+
+models:
+    - name: task1_global
+      description: "Top 20 station names"
+      columns:
+          - name: station
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+          - name: duration
+            description: "Must not be zero"
+            tests:
+                - not_null
+
+
+    - name: task2_Austin
+      description: "Successful subscribers in Austin"
+      columns:
+          - name: duration
+            description: "Duration of sharing"
+            tests:
+                - not_null
+
+    - name: task3_NewYork
+      description: "Age/Gender breakdown of riders in New York"
+      columns:
+          - name: gender
+            description: "Gender of rider"
+            tests:
+                - not_null
